@@ -1,0 +1,24 @@
+$footer_background-color: #373c43;
+$footer_text-color: #7f8591;
+
+.footer {
+  background-color: $footer_background-color;
+  color: $footer_text-color;
+  font-family: "Arial", sans-serif;
+
+  font-size:  12px;
+  line-height: 18px;
+
+  padding: 30px 30px 40px 30px;
+  display: inline-block;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  .footer__p {
+    margin-bottom: 1rem;
+  }
+  .footer__p:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,176 @@
+$form-pay__title_text-color: #383d43;
+
+/* Form with bank card's inputs and submit */
+.form-payment {
+  overflow: hidden;
+  .form-payment__title {
+    font-size: 22px;
+    line-height: 25px;
+    color: $form-pay__title_text-color;
+    margin-bottom: 22px - 1.5;
+  }
+  .form-payment__form {
+    position: relative;
+
+    $form-payment__background-card_color: #f7f7f7; 
+    $form-payment_border-color: #e4e9ee;
+    .form-payment__background-card {
+      width: 350px;
+      height: 236px;
+      border-radius: 10px;
+      box-sizing: border-box;
+      background-color: $form-payment__background-card_color;
+      border: 1px solid $form-payment_border-color;
+
+      .form-payment__form-rows {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        padding-top: 25px - (21 - 16) / 2;
+        padding-right: 15px;
+        padding-bottom: 7px;
+        padding-left: 15px;
+        .form-payment__form-label {
+          font-size: 16px;
+          line-height: 21px;
+          display: block;
+        }
+        .form-payment__form-label_right {
+          text-align: right;
+        }
+
+        .form-payment__form-row {
+          display: flex;
+          flex-flow: row nowrap;
+          height: 42px;
+          margin-bottom: 15px; 
+
+          /* Styles for all types field*/
+          $form-payment__input_text-color: #bec6cf;
+          $form-payment__input_background-color: #ffffff;
+          .form-payment__field {
+            box-sizing: border-box;
+            color: $form-payment__input_text-color;
+            background-color: $form-payment__input_background-color;
+            border: 1px solid $form-payment_border-color;
+          }
+          .form-payment__card-number-field {
+            width: 65px;
+            padding: 12px 15px 11px 15px;
+            margin-right: 10px;
+          }
+          .form-payment__select {
+            margin-right: 10px;
+            position: relative;
+            height: 100%;
+            box-sizing: border-box;
+            border: 1px solid $form-payment_border-color;
+            background-color: $form-payment__input_background-color;
+            overflow: hidden;
+
+            .form-payment__select-month {
+                width: 65px;
+
+            }
+            .form-payment__select-year {
+                width: 85px;
+            }
+
+            select {
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                appearance: none;
+                color: #333;
+                border: none;
+                background: transparent;
+                padding: 0px 5px 0px 10px;
+            }
+            .form-payment__select-icon {
+                position: absolute;
+                right: 8px;
+                top: 13px;;
+                width: 18px;
+                height: 18px;
+                fill: $form-payment__input_text-color;
+            }
+          }
+
+          .form-payment__owner-name {
+            max-width: 350px;
+            padding: 15px 15px 14px 15px;
+          }
+          .form-payment__field-cvc-wrapper {
+            position: relative;
+            margin-left: auto;
+            box-sizing: border-box;
+            .form-payment__field-cvc {
+                width: 137px;
+                padding: 12px 15px 11px 15px;
+            }
+            .form-payment__field-cvc-icon {
+                position: absolute;
+                right: 8px;
+                top: 8px;
+            }
+          }
+          .form-payment__field_error {
+            border: 1px solid red;
+          }         
+          /* Styles for all types field end*/
+        }
+
+      }
+    }
+    .form-payment__background-card-1 {
+        position: absolute;
+        z-index: 4;
+        top: 0;
+        left: 0;
+        .form-payment__form-rows-card-1 {
+          z-index: 5;
+        }
+    }
+    .form-payment__background-card-2 {
+        position: relative;
+        z-index: 1;
+        top: 20px;
+        left: 195px;
+        .form-payment__form-rows-card-2 {
+          z-index: 3;
+        }
+        .form-payment__card-blank {
+          position: absolute;
+          height: 42px;
+          width: 100%;
+          margin-top: 25px;
+          background-color: #e3e9ed;
+        }
+    }
+
+    $form-payment__submit_background-color: #0055b4;
+    $form-payment__submit_background-color_hover: #499dfd;
+    $form-payment__submit_text-color: #ffffff;
+    .form-payment__submit {
+      display:block;
+      background-color: $form-payment__submit_background-color;
+      color: $form-payment__submit_text-color;
+      font-family: "Open Sans", sans-serif;
+      font-weight: bold;
+      text-align: center;
+      font-size: 14px;
+      line-height: 18px;
+      width: 133px;
+      height: 40px;
+      border-radius: 20px;
+      margin-top: 40px;
+      transition: all 0.3s ease; 
+      
+      &:hover {
+        background-color: $form-payment__submit_background-color_hover;
+      }
+    }
+  }
+}
+/* Form end */

@@ -1,0 +1,137 @@
+$menu-aside_color_normal: #1f2229;
+$menu-aside_color_hover: #2a2d37;
+$menu-aside_text-color_light: #ffffff;
+$menu-aside_text-color_dark: #808592;
+
+/* Extended styles for desctop and mobile menu block*/ 
+%menu-aside__item {
+    height: 75px; 
+    box-sizing: border-box;
+    padding-left: 30px;
+    width: 100%;
+    background-color: $menu-aside_color_normal;
+
+    display: flex;
+    align-items: center;
+
+    color: $menu-aside_text-color_light;
+    text-align: left;
+    transition: background-color 0.3s ease;
+
+    text-decoration: none;
+}
+
+%menu-aside__item_hover {
+    background-color: $menu-aside_color_hover;
+    color: $menu-aside_text-color_dark;
+}
+
+/* Desctop menu */
+.menu-aside {
+    display: flex;
+    flex-direction: column;
+    font: bold normal 18px 'Open Sans', sans-serif;
+    box-sizing: border-box;
+
+    .menu-aside__item {
+        @extend %menu-aside__item;
+
+        &:hover {
+            @extend %menu-aside__item_hover;
+        }
+    }
+    .menu-aside__item_active {
+        @extend %menu-aside__item_hover;
+    }
+}
+/* Desctop menu end */
+
+/* Mobile menu */
+$menu-mobile_background-color: #0d0e10;
+.menu-mobile {
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+ 
+    background-color: $menu-aside_color_normal;
+    font: bold normal 18px 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    transform: translateX(150%);
+    opacity: 0;
+    transform-origin: right center;
+    transition: 0.3s ease;
+
+
+    .menu-aside__item {
+        @extend %menu-aside__item;
+        &:hover {
+            @extend %menu-aside__item_hover;
+        }
+    }
+
+    .menu-aside__item_active {
+        @extend %menu-aside__item_hover;
+    }
+
+    .menu-mobile__back-item {
+        display: flex;
+    }
+    .menu-mobile__back-icon {
+        fill: white;
+        margin-right: 10px;
+    }
+}
+
+.menu-mobile_active {
+    opacity: 1;
+    transform: translateX(0%);
+}
+/* Mobile menu end*/
+
+
+/* Control panel for mobile menu */
+$menu-header-control_background-color: #e3e9ed;
+$menu-header-control__button_background-color: #f7f8f8;
+
+$menu-header-control_text-color: #808592;
+$menu-header-control__button_text-color: #2a2d37;
+$menu-header-control__button_border-color: #ccc;
+.menu-header-control {
+    display: none;
+    height: 86px;
+    width: 642px;
+    background-color: $menu-header-control_background-color;
+    color: $menu-header-control_text-color;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    font: bold normal 14px 'Open Sans', sans-serif;
+    line-height: 33px;
+    box-sizing: border-box;
+
+    /* Info about active menu item */
+    .menu-header-control__temp-page {
+        padding-left: 30px;
+    }
+
+    /* Button for control appearance mobile menu */
+    .menu-header-control__button {
+        box-sizing: border-box;
+        height: 43px;
+        border-radius: 6px;
+        background-color: $menu-header-control__button_background-color;
+        color: $menu-header-control__button_text-color;
+        padding: 0 15px; 
+        border: 1px solid $menu-header-control__button_border-color;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font: bold normal 14px 'Open Sans', sans-serif;
+
+        .menu-header-control__menu-icon {
+            fill:$menu-header-control__button_text-color;
+        }
+    }
+}
+/* Control panel for mobile menu end*/

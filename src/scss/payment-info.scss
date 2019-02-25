@@ -1,0 +1,34 @@
+$payment-info__value_text-color:#373c43;
+
+.payment-info {
+  font-size: 16px;
+  line-height: 21px;
+  margin-bottom: 38px - (21 - 16)/2 + (25 - 22)/2;
+  .payment-info__title {
+    margin-bottom: 24px - (21-16);
+    display: inline-block;
+  }
+  .payment-info__row {
+    display: flex;
+    width: 293px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    margin-bottom: 13px - (21-16);
+    .payment-info__label {
+      width: 133px;
+      display: block;
+      box-sizing: border-box;
+    }
+    .payment-info__value {
+      display: block;
+      width: 160px;
+      box-sizing: border-box;
+      padding-left: 27px;
+      color: $payment-info__value_text-color;
+      text-align: left;
+    }
+  }
+  .payment-info__row:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/app.css">
+    <title>idaproject-task</title>
+</head>
+<body>
+
+    <!-- Mobile menu: appears on all screen when menu-header-control clicked-->
+    <section class="menu-mobile">
+            <div class="menu-aside__item menu-mobile__back-item">
+                    <svg class="menu-mobile__back-icon" height="32px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 "/>
+                    </svg>
+                    <span>Вернуться</span>
+            </div>
+            <a rel="nofollow" rel="noreferrer" href="" class="menu-aside__item">Личный кабинет</a>
+            <a rel="nofollow" rel="noreferrer" href="" class="menu-aside__item menu-aside__item_active">Платежи</a>
+            <a rel="nofollow" rel="noreferrer" href="" class="menu-aside__item">История платежей</a>
+            <a rel="nofollow" rel="noreferrer" href="" class="menu-aside__item">Настройки</a>
+            <a rel="nofollow" rel="noreferrer" href="" class="menu-aside__item">Выйти</a>
+    </section>
+    <!-- Mobile menu end -->
+
+    <div class="main-wrapper">
+
+        <!-- Aside menu: diasappears screen width less 1000px-->
+        <section class="menu-aside">
+            <a rel="nofollow" rel="noreferrer" href="" class="menu-aside__item">Личный кабинет</a>
+            <a rel="nofollow" rel="noreferrer" href="" class="menu-aside__item menu-aside__item_active">Платежи</a>
+            <a rel="nofollow" rel="noreferrer" href="" class="menu-aside__item">История платежей</a>
+            <a rel="nofollow" rel="noreferrer" href="" class="menu-aside__item">Настройки</a>
+            <a rel="nofollow" rel="noreferrer" href="" class="menu-aside__item">Выйти</a>
+        </section>
+        <!-- Aside menu end -->
+        
+        <div class="content-wrapper">
+
+            <!-- Control for mobile menu: appears when screen width less 1000px -->
+            <div class="menu-header-control">
+                <a class="menu-header-control__button">
+                    <span>Меню</span>
+                    <svg class="menu-header-control__menu-icon" height="18px" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="18px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+                    </svg>
+                </a>
+                <!-- Information about active menu item -->
+                <span class="menu-header-control__temp-page">Платежи</span>
+            </div>
+            <!-- Control for mobile menu end-->
+
+            <!-- Page's content -->
+            <div class="page">
+
+                <div class="payment-info">
+                    <span class="payment-info__title">Информация об оплате:</span>
+                    <div class="payment-info__row">
+                            <span class="payment-info__label">Номер счёта:</span>
+                            <span class="payment-info__account-number payment-info__value">87123658716587</span>
+                    </div>
+                    <div class="payment-info__row">
+                            <span>Сумма платежа:</span>
+                            <span class="payment-info__payment-amount payment-info__value">100&nbsp;руб.</span>
+                    </div>
+                </div>
+
+                <div class="form-payment">
+                    <h2 class="form-payment__title">Данные банковской карты</h2>
+
+                    <form class="form-payment__form" action="/" method="POST">
+
+                        <!-- Inputs from front side bank card-->
+                        <div class="form-payment__background-card form-payment__background-card-1">
+                            <div class="form-payment__form-rows form-payment__form-rows-card-1">
+                                <span class="form-payment__form-label">Номер карты</span>
+                                <div class="form-payment__form-row">
+                                    <div class="form-payment__card-number">              
+                                        <input class="form-payment__field form-payment__card-number-field" name="card_number1" value="" type="text" maxlength="4" autocomplete="off" autofocus spellcheck="false" placeholder="xxxx">
+                                        <input class="form-payment__field form-payment__card-number-field" name="card_number2" value="" type="text" maxlength="4" autocomplete="off" spellcheck="false" placeholder="xxxx">
+                                        <input class="form-payment__field form-payment__card-number-field" name="card_number3" value="" type="text" maxlength="4" autocomplete="off" spellcheck="false" placeholder="xxxx">
+                                        <input class="form-payment__field form-payment__card-number-field" name="card_number4" value="" type="text" maxlength="4" autocomplete="off" spellcheck="false" placeholder="xxxx">
+                                    </div>  
+                                </div>
+                                <span class="form-payment__form-label">Срок действия</span>
+                                <div class="form-payment__form-row">
+                                    <div class="form-payment__select">
+                                        <select name="select-month" class="form-payment__select-month">
+                                            <option selected="selected">01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                            <option>04</option>
+                                            <option>05</option>
+                                            <option>06</option>
+                                            <option>07</option>
+                                            <option>08</option>
+                                            <option>09</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                        </select>
+                                        <svg class="form-payment__select-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                                            <g>
+                                              <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="form-payment__select">
+                                        <select name="select-year" class="form-payment__select-year">
+                                            <option selected="selected">2019</option>
+                                            <option>2020</option>
+                                            <option>2021</option>
+                                            <option>2022</option>
+                                        </select>
+                                        <svg class="form-payment__select-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                                            <g>
+                                              <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="form-payment__form-row">
+                                    <input class="form-payment__field form-payment__owner-name" name="owner_name" type="text" autocomplete="off" spellcheck="false" placeholder="Держатель карты">
+                                </div>          
+                            </div> 
+                        </div>
+                        <!-- Inputs from front side bank card end-->
+
+                        <!-- Inputs from back side bank card-->
+                        <div class="form-payment__background-card form-payment__background-card-2">
+                                <div class="form-payment__card-blank"></div>
+                                <div class="form-payment__form-rows form-payment__form-rows-card-2">
+                                        <div class="form-payment__form-row"></div>
+                                        <span class="form-payment__form-label form-payment__form-label_right">Код CVV2 / CVC2</span>
+                                        <div class="form-payment__form-row">
+                                            <div class="form-payment__field-cvc-wrapper">
+                                                <svg class="form-payment__field-cvc-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="26" height="26">
+                                                    <defs>
+                                                        <image width="30" height="30" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAAXNSR0IB2cksfwAAAJxQTFRFAAAAvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvsbPvsbPvsbPvsbPvcXPvcXPvsbPvsbPvsbPvsbPvcXPvcXPvsbPvsbPvsbPvsbPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXPvcXP2jFb3QAAADR0Uk5TACA/ECGPz//fwO+vbyyfcDBQkApgNyJEqrtVv1lm/3eIgH8R7pki0C9AD/BPsB9foC0WQzwlQF8AAAEJSURBVHicrZJte0MwFIYjhiRVUrOFWmO0tGtZ2f7/f1vXEEnol107HzzPyZ3zwgWAfwwL2o/Qk+N6CBNv5S9cWQcopHe3iYj/bFBK4imxo9WLTl2q5Rtia9QcR8la+ldCgRlxIG3kD4YlabIdfPY2GAsNZsfTPOXvxmlRCt0fktuz4rVIx22PJ6F1xX4HcCZSPxLqaTtVh70wEOtDBOW78d3cu3xkWu1Iwfkya76VtbK5inM++aYV2jbyqGYTdkKhyvdj+YSRJdQmnwvNr93olHKluJe2u85ooPwePTkZtCzUrDnq9UHxpeV9l8FpKxQDM76xW0J4ho2Dun5Gb0ELjC+4Da0l+Jf4AdYUD/lyFnhRAAAAAElFTkSuQmCC"/>
+                                                    </defs>
+                                                    <style>
+                                                        tspan { white-space:pre }
+                                                    </style>
+                                                    <g id="authorization copy">
+                                                        <g id="t1 copy">
+                                                            <g id="карта copy">
+                                                                <g id="2">
+                                                                    <use id="подсказка" href="#img1" transform="matrix(1,0,0,1,-2,-2)"/>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <input class="form-payment__field form-payment__field-cvc" name="cvc" type="text" maxlength="3" autocomplete="off" spellcheck="false" placeholder="xxx">                                            
+                                            </div>
+                                        </div>
+                                </div>                          
+                        </div>
+                        <!-- Inputs from back side bank card end-->
+
+                        <input class="form-payment__submit" type="submit" value="Отправить">
+                    </form>                   
+                </div>
+            </div>
+            <!-- Page's content end -->
+            
+            <!-- Footer -->
+            <div class="footer">
+                <p class="footer__p ">
+                    Исходя из астатической системы координат Булгакова,
+                     соединение стабильно. Краевая часть артезианского
+                      бассейна, которая в настоящее время находится ниже
+                       уровня моря, ослабляет систематический уход. Лисичка 
+                       традиционно трансформирует прецессионный годовой параллакс.
+                </p>
+                <p class="footer__p ">
+                    Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
+                </p>
+                <p class="footer__p ">
+                    Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
+                </p>
+                <p class="footer__p ">   
+                    Устойчивость, например, параллельна. Аргумент перигелия определяет боксит.
+                     Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, 
+                     то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не
+                      только первичными неровностями эрозионно-тектонического рельефа
+                       поверхности кристаллических пород, но и проявлениями долее поздней 
+                       блоковой тектоники. Засветка неба заставляет иначе взглянуть на то,
+                        что такое волчок.
+                </p>
+            </div>
+            <!-- Footer end-->
+
+        </div>
+
+
+    </div>
+    
+    <script src="/dist/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+/* Common style for page content */
+$page__label_text-color: #8494ab;
+$page_background-color: #f7f8f8;
+.page {
+  background-color: $page_background-color;
+  padding: 50px 25px 45px 30px;
+  font-family: "Arial", sans-serif;
+  color: $page__label_text-color;
+  display: inline-block;
+
+  width: 100%;
+  box-sizing: border-box;
+}
